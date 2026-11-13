@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070c"/>
+      <stop offset="45%" stop-color="#0c111e"/>
+      <stop offset="100%" stop-color="#070912"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="32%" cy="48%" r="45%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.32"/>
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="72%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#7fd1ff"/>
+      <stop offset="70%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="cyanStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7fd1ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="tagBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141c2e" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#1b253b" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Filters for Bloom and Neon Glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Pattern -->
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1d263b" stroke-width="0.75" stroke-opacity="0.45"/>
+    </pattern>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#38bdf8" fill-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1280" height="480" fill="url(#bgGrad)"/>
+  <rect width="1280" height="480" fill="url(#grid)"/>
+  <rect width="1280" height="480" fill="url(#dots)"/>
+  <rect width="1280" height="480" fill="url(#glowCyan)"/>
+  <rect width="1280" height="480" fill="url(#glowViolet)"/>
+
+  <!-- Border & Corner Brackets -->
+  <rect x="18" y="18" width="1244" height="444" rx="16" fill="none" stroke="#222d45" stroke-width="1.5"/>
+  <path d="M 18 50 L 18 18 L 50 18" fill="none" stroke="#7fd1ff" stroke-width="3" filter="url(#softGlow)"/>
+  <path d="M 1262 50 L 1262 18 L 1230 18" fill="none" stroke="#7fd1ff" stroke-width="3" filter="url(#softGlow)"/>
+  <path d="M 18 430 L 18 462 L 50 462" fill="none" stroke="#7fd1ff" stroke-width="3" filter="url(#softGlow)"/>
+  <path d="M 1262 430 L 1262 462 L 1230 462" fill="none" stroke="#7fd1ff" stroke-width="3" filter="url(#softGlow)"/>
+
+  <!-- Top System Status Strip -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#8896b3" letter-spacing="1.5">
+    <circle cx="48" cy="42" r="4" fill="#57d98a" filter="url(#softGlow)"/>
+    <text x="60" y="46" font-weight="600" fill="#a4b3d1">SYSTEM ONLINE • LIVE WEBAR ANATOMICAL PIPELINE</text>
+    <text x="890" y="46" font-family="'Courier New', monospace" fill="#607297">478 FACE PTS / 21 HAND PTS / 60 FPS</text>
+    <path d="M 1190 42 L 1228 42" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- Left Side: Holographic Anatomical Art (Skull + Neural Brain + Hand Skeleton) -->
+  <g transform="translate(195, 245)">
+    <!-- Scanning Rings & Reticle -->
+    <circle cx="0" cy="-10" r="160" fill="none" stroke="#263554" stroke-width="1" stroke-dasharray="4,8"/>
+    <circle cx="0" cy="-10" r="140" fill="none" stroke="#1f2c47" stroke-width="1"/>
+    <circle cx="0" cy="-10" r="115" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.35" stroke-dasharray="25,10,5,10"/>
+    
+    <!-- Reticle crosshairs -->
+    <line x1="-175" y1="-10" x2="-145" y2="-10" stroke="#7fd1ff" stroke-width="1.5" stroke-opacity="0.7"/>
+    <line x1="145" y1="-10" x2="175" y2="-10" stroke="#7fd1ff" stroke-width="1.5" stroke-opacity="0.7"/>
+    <line x1="0" y1="-185" x2="0" y2="-155" stroke="#7fd1ff" stroke-width="1.5" stroke-opacity="0.7"/>
+    <line x1="0" y1="135" x2="0" y2="165" stroke="#7fd1ff" stroke-width="1.5" stroke-opacity="0.7"/>
+
+    <!-- Dynamic Scanline Beam -->
+    <line x1="-135" y1="-30" x2="135" y2="-30" stroke="#7fd1ff" stroke-width="1.5" stroke-opacity="0.8" filter="url(#neonGlow)"/>
+    <rect x="-135" y="-55" width="270" height="25" fill="url(#cyanStroke)" opacity="0.12"/>
+
+    <!-- Stylized Cranium & Facial Bones Vector -->
+    <!-- Brain Cortex Silhouette (Glowing Pink/Violet) -->
+    <path d="M -50 -55 C -55 -95 -30 -125 0 -125 C 30 -125 55 -95 50 -55 C 65 -50 70 -25 58 -5 C 50 15 35 15 25 10 C 15 25 -15 25 -25 10 C -35 15 -50 15 -58 -5 C -70 -25 -65 -50 -50 -55 Z" 
+          fill="#c084fc" fill-opacity="0.18" stroke="#e879f9" stroke-width="2" stroke-dasharray="8,3" filter="url(#softGlow)"/>
+    <!-- Neural Synapse Nodes inside brain -->
+    <circle cx="-25" cy="-80" r="3.5" fill="#f472b6" filter="url(#softGlow)"/>
+    <circle cx="20" cy="-85" r="3" fill="#38bdf8" filter="url(#softGlow)"/>
+    <circle cx="0" cy="-60" r="3" fill="#e879f9" filter="url(#softGlow)"/>
+    <circle cx="-35" cy="-50" r="2.5" fill="#38bdf8"/>
+    <circle cx="35" cy="-50" r="2.5" fill="#f472b6"/>
+    <!-- Synaptic connections -->
+    <path d="M -25 -80 L 0 -60 L 20 -85 M 0 -60 L -35 -50 M 0 -60 L 35 -50" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.7"/>
+
+    <!-- Cranial Vault (Skull - Glowing Cyan/Blue) -->
+    <path d="M -60 -25 C -65 -75 -40 -115 0 -115 C 40 -115 65 -75 60 -25 C 65 5 50 20 40 35 C 32 45 28 65 24 82 C 18 88 -18 88 -24 82 C -28 65 -32 45 -40 35 C -50 20 -65 5 -60 -25 Z" 
+          fill="none" stroke="#7fd1ff" stroke-width="2.2" filter="url(#neonGlow)"/>
+
+    <!-- Eye Orbits -->
+    <ellipse cx="-24" cy="-10" rx="14" ry="17" fill="#090f1d" stroke="#7fd1ff" stroke-width="1.8"/>
+    <ellipse cx="24" cy="-10" rx="14" ry="17" fill="#090f1d" stroke="#7fd1ff" stroke-width="1.8"/>
+    <circle cx="-24" cy="-10" r="4" fill="#38bdf8" filter="url(#softGlow)"/>
+    <circle cx="24" cy="-10" r="4" fill="#38bdf8" filter="url(#softGlow)"/>
+
+    <!-- Nasal Cavity (Piriform aperture) -->
+    <path d="M 0 5 L 6 22 L -6 22 Z" fill="#090f1d" stroke="#7fd1ff" stroke-width="1.5"/>
+
+    <!-- Zygomatic Arches (Cheekbones) -->
+    <path d="M -38 0 C -52 10 -50 28 -36 32" fill="none" stroke="#7fd1ff" stroke-width="1.5"/>
+    <path d="M 38 0 C 52 10 50 28 36 32" fill="none" stroke="#7fd1ff" stroke-width="1.5"/>
+
+    <!-- Maxilla & Mandible / Teeth Rows -->
+    <path d="M -22 42 Q 0 45 22 42" stroke="#7fd1ff" stroke-width="2" fill="none"/>
+    <line x1="-15" y1="40" x2="-15" y2="44" stroke="#7fd1ff" stroke-width="1.5"/>
+    <line x1="-7" y1="41" x2="-7" y2="45" stroke="#7fd1ff" stroke-width="1.5"/>
+    <line x1="0" y1="41" x2="0" y2="45" stroke="#7fd1ff" stroke-width="1.5"/>
+    <line x1="7" y1="41" x2="7" y2="45" stroke="#7fd1ff" stroke-width="1.5"/>
+    <line x1="15" y1="40" x2="15" y2="44" stroke="#7fd1ff" stroke-width="1.5"/>
+
+    <!-- Mandible (Jaw with dynamic hinge pivot marker) -->
+    <path d="M -30 46 C -28 65 -22 80 0 82 C 22 80 28 65 30 46" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="-32" cy="42" r="3" fill="#ff5d73" filter="url(#softGlow)"/>
+    <circle cx="32" cy="42" r="3" fill="#ff5d73" filter="url(#softGlow)"/>
+    <!-- Hinge annotation -->
+    <text x="38" y="45" font-family="-apple-system, sans-serif" font-size="9" fill="#ff7a8b" font-weight="700">TMJ PIVOT</text>
+
+    <!-- Skeletal Hand Bones Floating Beside Skull -->
+    <g transform="translate(105, 30) scale(0.68)">
+      <path d="M 0 0 L 15 -35 M 0 0 L 30 -30 M 0 0 L 40 -15 M 0 0 L 45 5 M 0 0 L 35 25" stroke="#d9f0ff" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="15" cy="-35" r="3" fill="#7fd1ff"/>
+      <circle cx="30" cy="-30" r="3" fill="#7fd1ff"/>
+      <circle cx="40" cy="-15" r="3" fill="#7fd1ff"/>
+      <circle cx="45" cy="5" r="3" fill="#7fd1ff"/>
+      <circle cx="35" cy="25" r="3" fill="#7fd1ff"/>
+      <circle cx="0" cy="0" r="4" fill="#a855f7" filter="url(#softGlow)"/>
+      <text x="15" y="42" font-family="-apple-system, sans-serif" font-size="11" fill="#7fd1ff" font-weight="600">CARPALS 3D</text>
+    </g>
+
+    <!-- Callout Tags Left -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">
+      <path d="M -50 -80 L -105 -80 L -120 -95" fill="none" stroke="#f472b6" stroke-width="1.2"/>
+      <rect x="-175" y="-110" width="70" height="20" rx="4" fill="#181324" stroke="#f472b6" stroke-width="1"/>
+      <text x="-167" y="-96" fill="#f472b6">CEREBRUM</text>
+
+      <path d="M -40 35 L -100 35 L -115 50" fill="none" stroke="#7fd1ff" stroke-width="1.2"/>
+      <rect x="-185" y="42" width="85" height="20" rx="4" fill="#0f1a2e" stroke="#7fd1ff" stroke-width="1"/>
+      <text x="-177" y="56" fill="#7fd1ff">ZYGOMATIC</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Hero Content & Typography -->
+  <g transform="translate(470, 110)">
+    <!-- Category Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="28" rx="14" fill="url(#tagBg)" stroke="#2b3b5e" stroke-width="1"/>
+      <circle cx="14" cy="14" r="5" fill="#38bdf8" filter="url(#softGlow)"/>
+      <text x="28" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#7fd1ff" letter-spacing="1.2">
+        WEBAR • NEURAL VISUALIZATION
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial Black', sans-serif" font-size="54" font-weight="900" fill="url(#titleGrad)" letter-spacing="1" filter="url(#softGlow)">
+      NEUROMIRROR
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500" fill="#e2e8f0" letter-spacing="0.2">
+      Real-Time Augmented Reality Anatomical &amp; Neural X-Ray Mirror
+    </text>
+
+    <text x="0" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#94a3b8" letter-spacing="0.1">
+      Look into your webcam to reveal your 3D skull, brain hemispheres, facial musculature, and hand skeleton.
+    </text>
+
+    <!-- Feature Pillars Badges -->
+    <g transform="translate(0, 180)">
+      <!-- Badge 1: MediaPipe 478 Landmarks -->
+      <g transform="translate(0, 0)">
+        <rect width="170" height="36" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2"/>
+        <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#38bdf8">⚡ 478 Landmark Tracking</text>
+      </g>
+      <!-- Badge 2: Three.js Shaders -->
+      <g transform="translate(182, 0)">
+        <rect width="160" height="36" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2"/>
+        <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#c084fc">🔬 GLSL X-Ray Shaders</text>
+      </g>
+      <!-- Badge 3: Jaw Kinematics -->
+      <g transform="translate(354, 0)">
+        <rect width="175" height="36" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2"/>
+        <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#34d399">🗣️ Mandible Kinematics</text>
+      </g>
+      <!-- Badge 4: Hand Bones -->
+      <g transform="translate(541, 0)">
+        <rect width="175" height="36" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.2"/>
+        <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f472b6">🖐️ 3D Skeletal Hands</text>
+      </g>
+    </g>
+
+    <!-- Lower Status Bar / Specs -->
+    <g transform="translate(0, 240)">
+      <rect width="716" height="52" rx="10" fill="#0a0f1d" stroke="#1b253b" stroke-width="1"/>
+      <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">
+        <text x="20" y="31" fill="#64748b">COMPATIBILITY:</text>
+        <text x="115" y="31" font-weight="600" fill="#e2e8f0">Chrome, Safari, Edge, Firefox (Desktop &amp; Mobile)</text>
+        <line x1="435" y1="16" x2="435" y2="38" stroke="#1e293b" stroke-width="1"/>
+        <text x="455" y="31" fill="#64748b">DEPLOYMENT:</text>
+        <text x="545" y="31" font-weight="700" fill="#57d98a">GitHub Pages Ready</text>
+      </g>
+    </g>
+  </g>
+</svg>

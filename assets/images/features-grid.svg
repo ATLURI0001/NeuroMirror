@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131b2e"/>
+      <stop offset="100%" stop-color="#0f1524"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="480" rx="14" fill="url(#fBg)"/>
+  <rect x="1" y="1" width="1098" height="478" rx="13" fill="none" stroke="#1f2a40" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="40" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#eef1f8" letter-spacing="0.5">
+    KEY CAPABILITIES &amp; SCIENTIFIC FEATURES
+  </text>
+  <text x="40" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8896b3">
+    Cutting-edge browser-native augmented reality for clinical education, neuroscience, and interactive anatomy
+  </text>
+
+  <!-- 6 Cards Grid (2 rows x 3 columns) -->
+  <!-- Card 1: Cranium & Dynamic Jaw -->
+  <g transform="translate(40, 95)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#0c1f36" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">💀</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">Cranial &amp; Jaw Kinematics</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#7fd1ff">Dynamic TMJ Hinge Pivot</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Tracks mouth aperture in real time; rotates the 3D mandible bone around anatomically accurate jaw pivots as you talk or smile.
+    </text>
+    <rect x="20" y="122" width="110" height="22" rx="4" fill="#091322"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#38bdf8">478-pt calibration</text>
+  </g>
+
+  <!-- Card 2: Neural Cortex & Brain -->
+  <g transform="translate(390, 95)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#241333" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">🧠</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">Neural &amp; Brain Overlay</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#c084fc">Cerebrum &amp; Hemispheres</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Volumetric brain mesh anchored into the cranial vault with frontal, parietal, temporal, and occipital positioning.
+    </text>
+    <rect x="20" y="122" width="125" height="22" rx="4" fill="#1b1029"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#c084fc">Cortical depth fit</text>
+  </g>
+
+  <!-- Card 3: Musculature & Ocular -->
+  <g transform="translate(740, 95)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#2b1418" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">💪</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">Muscles &amp; Ocular Orbits</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#f43f5e">Superficial &amp; Deep Layers</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Examine masseter, temporalis, frontalis muscles and tracked optical eyeballs with realistic orbital cavity alignment.
+    </text>
+    <rect x="20" y="122" width="135" height="22" rx="4" fill="#220e14"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#f43f5e">Myological structures</text>
+  </g>
+
+  <!-- Card 4: 3D Skeletal Hands -->
+  <g transform="translate(40, 280)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#0f2622" stroke="#34d399" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">🖐️</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">3D Skeletal Hand Tracking</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#34d399">Carpals, Metacarpals &amp; Phls</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Raise your hands to project 3D articulated bone segments and palm joints directly over your fingers in true stereoscopic depth.
+    </text>
+    <rect x="20" y="122" width="125" height="22" rx="4" fill="#0a1d18"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#34d399">21 joints per hand</text>
+  </g>
+
+  <!-- Card 5: Multi-Reveal Modes -->
+  <g transform="translate(390, 280)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#241d0e" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">🔍</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">Multi-Modal Optical Reveal</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#fbbf24">Full • Split • Lens • Slice</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Explore anatomy via full immersion, vertical split-screen comparison, interactive flashlight lens, or depth plane slicing.
+    </text>
+    <rect x="20" y="122" width="115" height="22" rx="4" fill="#20170a"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#fbbf24">Interactive shaders</text>
+  </g>
+
+  <!-- Card 6: Zero Dependencies & Privacy -->
+  <g transform="translate(740, 280)">
+    <rect width="320" height="160" rx="10" fill="url(#cardBg)" stroke="#223049" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#0f2136" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="27" y="42" font-size="17">🛡️</text>
+    <text x="68" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#eef1f8">100% Client-Side Privacy</text>
+    <text x="68" y="50" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#60a5fa">Zero Server Transmission</text>
+    <text x="20" y="85" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+      Runs entirely in the browser with WebAssembly &amp; WebGL. Your video feed never leaves your hardware. Single-file deployable.
+    </text>
+    <rect x="20" y="122" width="125" height="22" rx="4" fill="#0d1829"/>
+    <text x="28" y="137" font-family="monospace" font-size="10" fill="#60a5fa">Zero backend setup</text>
+  </g>
+</svg>
